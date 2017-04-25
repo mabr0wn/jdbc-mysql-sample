@@ -42,7 +42,7 @@ public class Employee {
   public void setDeptId(int deptId) {
     this.deptID = deptId;
   }
-  
+  //the toSting changes objects into strings.
   @override
   public String toString() {
       return "Employee [empId=" + empId + ", empName=" + empName + ", dob=" + dob + ", salary=" + salary + ", deptId="
