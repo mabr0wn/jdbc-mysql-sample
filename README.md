@@ -1,4 +1,36 @@
-# JDBCMySQLSample
-Sample to tie employees to MySQL Database
+jdbc-mysql-sample
+=================
 
-We start but creating a java class called lets say employees.
+MySQL Connector/J is the official JDBC driver for MySQL.
+
+It is a native Java driver that converts JDBC (Java Database Connectivity) calls into the network protocol used by the MySQL database.
+
+For more see <http://dev.mysql.com/doc/connector-j/en/connector-j-overview.html>
+
+Usage
+-----
+
+To make the driver accessible to JDBC and ActiveRecord code running in JRuby :
+
+```
+require 'jdbc/mysql'
+Jdbc::MySQL.load_driver
+
+```
+
+For backwards compatibility with older (<= **5.1.13**) versions of the gem use :
+
+```
+require 'jdbc/mysql'
+Jdbc::MySQL.load_driver(:require) if Jdbc::MySQL.respond_to?(:load_driver)
+
+```
+
+Copyright
+---------
+
+Copyright (c) 2013-2015 [The JRuby Team](https://github.com/jruby).
+
+MySQL open source software is provided under the GPL (2.0) License, see *LICENSE.txt* and <http://www.gnu.org/licenses/old-licenses/gpl-2.0.html> .
+
+
